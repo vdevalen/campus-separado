@@ -75,7 +75,7 @@ body{
     transition: opacity 0.2s ease;
 }
 /* .container .text{
-   margin: auto;
+margin: auto;
     
 } */
 .container.active .forms{
@@ -208,3 +208,8 @@ body{
     right: 100px;
     display: block;
 }
+
+.button[
+    
+]
+
