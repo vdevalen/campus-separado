@@ -1,0 +1,363 @@
+/*reset simple: aplican estilos*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*header*/
+header{
+    height: 100px; /*altura*/
+    background: #00369c;
+    padding: 0 50px; /*ponerlo mas centrado, ambos lados 50px*/
+    color: #fff;
+    display: flex; /*ponerlo mas organizado uno al lado del otro*/
+    justify-content: space-between; /*ponerlo separado uno del otro*/
+    align-items: center; /*centrados dentro del contenedor*/
+    
+}
+
+.logo{
+    text-transform: uppercase; /*poner la letra en mayuscula del html*/
+    color: #fff;
+    font-weight: 200; /*poner la letra menos ancha*/
+
+}
+
+.menu{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 200;
+}
+.menu a{ /*menu a*/
+    color: #fff;
+    text-transform: uppercase; /*mayuscula*/
+    text-decoration: none; /*quitar subrayado*/
+    padding: 0 10px; /*0 px arriba pero 10px a los lado, los separa*/
+    transition: 0.4s;
+    display: flex;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px; /*ponerlo mas grande*/
+    cursor: pointer; /*manito*/
+    display: none; 
+    transition: 0.4s;
+} 
+
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu :hover, /*realiza actividades cuando se pasa el cursos*/
+.esconder-menu:hover{
+    color: #1a60e0; /*solo pone color encima de las palabras*/
+}
+
+#check{
+    display: none;
+}
+
+/*banner*/
+
+#banner{
+    padding: 0 50px; /*se alinea la pagina que tenga la misma margen*/
+    background-image: url(/imagenes/photo-1565120130276-dfbd9a7a3ad7.avif);
+    height: 100vh;
+    background-size: cover; /*toma todo*/
+    background-position: center;
+
+}#banner::before{
+    content: '';
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+}
+
+.contenido-banner{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+
+.boton-empezar{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #16ce21;
+    padding: 20px 40px;
+    align-self: baseline; /*organiza el boton*/
+    transition: all 0.4s;
+    background-color: #16ce21;
+    border-radius: 10px;
+}
+
+.boton-empezar:hover{
+    background:  #00ff15;
+}
+
+/*personas*/
+#personas{
+    padding: 50px 50px;
+    display: flex;s
+    justify-content: center;
+    text-align: center;
+}
+
+
+#personas img{
+    border-radius: 100%;
+    max-width: 300px ;
+    max-height: 300px;
+    
+
+}
+
+#personas div{
+    padding: 30px 30px;
+}
+
+#personas div h4{
+    color: #00369c;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+#personas div p{
+    color: #4d4d5c87;
+    font-size: 18px;
+}
+
+.boton-saber-mas{
+    display:inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 30px;
+    border: 3px solid #16ce21;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: all 0.4s;
+    background: #16ce21;
+
+}
+
+.boton-saber-mas:hover{
+    background: #00ff15;
+    color: #fff;
+}
+
+/*iconos**/
+#iconos{
+    padding: 0px 50px;
+    background: #fff;
+}
+
+.contenido-iconos{
+    padding: 10px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contenido-iconos div{
+    flex: 1;
+    margin: 20px 0px;
+    border-right: 2px solid #00369c;
+}
+
+#icono-mobile{
+    border: none;
+
+}
+
+#iconos h4{
+    padding: 50px;
+    text-align: center;
+    font-size: 35px;
+    color:#00369c;
+    font-weight: 200;
+}
+
+.contenido-iconos div i{
+    color:#00369c
+}
+
+.contenido-iconos div h6{
+    color: black;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px 0px;
+}
+
+.contenido-iconos div p{
+    color: black;
+    font-size: 15px;
+}
+
+.boton-iconos{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/*formularios*/
+#contacto{
+    background: #00369c;
+    padding: 50px 0;
+    color: #fff;
+}
+
+#contacto h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    
+}
+
+#contacto form{
+    max-width: 80% ;
+    margin: 0 auto;
+}
+
+.datos-form{
+    display: flex;
+
+}
+
+.datos-form div{
+    padding: 10px;
+    flex: 1;
+}
+
+form label{
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+form input,
+form textarea{
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #00369c;
+    padding: 10px 5px;
+    outline: 0;
+    color: #fff;
+    width: 100%;
+}
+
+form input:focus,
+form textarea:focus{
+    border-color: #fff;
+    box-shadow: 0 0 0 1px #00369c;
+}
+
+form input::placeholder,
+form textarea::placeholder{
+    color: #fff;
+}
+
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.boton-formulario .boton-saber-mas{
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.boton-formulario .boton-saber-mas:hover{
+    background: red ;
+}
+
+/*footer*/
+
+footer{
+    background:#364f7c;
+    color: black;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+
+/*responsive*/
+@media(max-width: 760px){
+    /*header*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed; 
+        width: 100%; /*ocupa todo*/
+        height: 100vh; /*100 de cualquier dispositivo*/
+        background-color: #00369c;
+        right: -100%; 
+        top: 0; /*abarca todo*/
+        text-align: center;    /*centra todo*/
+        padding: 100px 0px;
+        z-index: 100; /*para que no se toquen*/
+        transition: 0.8s; 
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{ /* la x del menu, poner la x arriba en el manu*/
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{ /*cuando el chek este chekeado y todo s los elementos de menu*/
+        right: 0;
+    }
+
+    /*personas*/
+
+    #personas{
+        flex-direction: column;
+    }
+
+    /*icoonos*/
+
+    .contenido-iconos{
+    flex-direction: column;
+    
+    }
+
+    .contenido-iconos div{
+    border: none;
+    }
+}
+/*formulario*/
+
+.datos-form{
+    flex-direction: column;
+}
+
+
+
+/*LOGINNNNNNNNNNNNNNNNNNNNNN*/

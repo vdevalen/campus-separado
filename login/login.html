@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus2022</title>
+    <script script src= ' https://www.google.com/recaptcha/api.js?hl=es'></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="/login/login.css">
+    <title>Campus</title>
+    <script src='https://www.google.com/recaptcha/api.js?render=6LeutIAgAAAAAOs04XyQERGNZvqEHK2TnM8hinp-'>
+    </script>
+
+    <!-- <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LeutIAgAAAAAOs04XyQERGNZvqEHK2TnM8hinp-', { action: 'formulario' })
+                .then(function (token) {
+                    var recaptchaResponse = document.getElementById('recaptchaResponse');
+                    recaptchaResponse.value = token;
+                });
+        });
+
+    </script> -->
+</head>
+<a href="/resgistro/registro.html" class="boton-crear-usuario">Crear usuario</a>
+
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">CAMPUS | SC</span>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" id="email" class="email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="password" class="password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Recuérdame</label>
+                        </div>
+
+                        <a href="/olvidasteC/olvidaste.html" class="text">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Iniciar sesión" onclick="Login()">
+                    </div>
+                    <br>
+                    <!-- <form action="?" method="POST">
+                        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                        <br />
+                    </form> -->
+                    <div class="g-recaptcha" data-sitekey="clave_publica" > </div> <!--poner clave de google CREARLA-->
+                </form>
+                <div class="login-signup">
+                    <span class="text">¿No eres un miembro?
+                        <a href="/resgistro/registro.html" class="text signup-link">Regístrate ahora</a>
+                    </span>
+                </div>
+            </div>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        function Login() {
+        var data = {
+            email: $("#email").val(),
+            password: $("#password").val()
+        }
+        console.log(data);
+        $.ajax({
+            type: 'POST',
+            url: 'https://localhost:7148/api/account/login',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(data),
+            success: function (result) {
+                alert('Login exitoso');
+                console.log(result);
+            },
+            error: function () {
+                alert('Login fallido');
+                console.log('Failed ');
+            }
+        })
+    }
+    </script>
+    <script src="login.js"></script>
+</body>
+</html>

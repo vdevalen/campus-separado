@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus2022</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="/resgistro/registro.css">
+    <title>Campus</title>
+</head>
+
+<body>
+<!-- Registration Form -->
+<!-- Registration Form -->
+<div class="container1">
+<div class="forms">
+<div class="form1 signup">
+    <span class="title">REGISTRO | SC</span>
+    <form action="#">
+        <div class="input-field">
+            <input type="text" placeholder="Cedula" required>
+            <i class="uil uil-user"></i>
+        </div>
+
+        <form action="#">
+            <div class="input-field">
+                <input type="text" placeholder="Nombre" required>
+                <i class="uil uil-user"></i>
+            </div>
+
+            <form action="#">
+                <div class="input-field">
+                    <input type="text" placeholder="Apellido" required>
+                    <i class="uil uil-user"></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" placeholder="Correo electronico" required>
+                    <i class="uil uil-envelope icon"></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" class="password" placeholder="Contraseña" required>
+                    <i class="uil uil-lock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+
+                <div class="input-field">
+                    <input class="TestInput" type="password" class="password"
+                        placeholder="Confirmar contraseña" required>
+                    <i class="uil uil-lock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+
+                </div>
+
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input type="checkbox" id="termCon">
+                        <label for="termCon" class="text">Acepté todos los términos y condiciones</label>
+                    </div>
+                </div>
+
+                <div class="input-field button">
+                    <input type="button" value="Acceso">
+                </div>
+            </form>
+
+            <div class="login-signup">
+                <span class="text">¿Ya eres usuario?
+                    <a href="/login/login.html" class="text login-link">Inicia sesión ahora</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+function Login() {
+var data = {
+email: $("#email").val(),
+password: $("#password").val()
+}
+console.log(data);
+$.ajax({
+type: 'POST',
+url: 'https://localhost:7148/api/account/login',
+contentType: 'application/json; charset=utf-8',
+data: JSON.stringify(data),
+success: function (result) {
+    alert('Login exitoso');
+    console.log(result);
+},
+error: function () {
+    alert('Login fallido');
+    console.log('Failed ');
+}
+})
+}
+</script>
+<script src="login.js"></script>
+</body>
+
+<script src="/login/login.js"></script>
+</html>
