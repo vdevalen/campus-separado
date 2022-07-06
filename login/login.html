@@ -79,7 +79,7 @@
         console.log(data);
         $.ajax({
             type: 'POST',
-            url: 'https://localhost:7148/api/account/login',
+            url: 'https://webapiapplication.herokuapp.com/api/account/login',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data),
             success: function (result) {

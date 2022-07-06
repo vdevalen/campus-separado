@@ -186,6 +186,55 @@ header{
     padding-bottom: 50px;
 }
 
+/*cajas*/
+
+
+#cajas{
+    background-color: ;
+    padding: 20px 20px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+    text-align: center;
+}
+
+#cajas img{
+    border-radius: 100%;
+    max-width: 300px ;
+    max-height: 300px;
+    border: #00369c 10PX;
+}
+
+#cajas div h4{
+    color: #00369c;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+#cajas div p{
+    color: #4d4d5c87;
+    font-size: 18px;
+}
+
+.boton-saber-mas{
+    display:inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 30px;
+    border: 3px solid #16ce21;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: all 0.4s;
+    background: #16ce21;
+
+}
+
+.boton-saber-mas:hover{
+    background: #00ff15;
+    color: #fff;
+}
+
 /*formularios*/
 #contacto{
     background: #00369c;
@@ -228,7 +277,7 @@ form textarea{
     border: 2px solid #00369c;
     padding: 10px 5px;
     outline: 0;
-    color: #fff;
+    color: black;
     width: 100%;
 }
 
@@ -249,27 +298,21 @@ form textarea::placeholder{
     padding: 10px;
 }
 
-.boton-formulario .boton-saber-mas{
-    display: block;
-    border: 1px solid #fff;
+.boton-formulario{
+    text-decoration: none;
     color: #fff;
-    text-align: center;
-    transition: 0.4s;
+    border: 1px solid #16ce21;
+    padding: 10px 20px;
+    align-self: baseline; /*organiza el boton*/
+    transition: all 0.4s;
+    background-color: #16ce21;
+    border-radius: 10px;
+    display:inline-block;
 }
 
-.boton-formulario .boton-saber-mas:hover{
-    background: red ;
+.boton-formulario:hover{
+    background:  #00ff15;
 }
-
-/*footer*/
-
-footer{
-    background:#364f7c;
-    color: black;
-    text-align: center;
-    padding: 10px 0px;
-}
-
 
 /*responsive*/
 @media(max-width: 760px){
@@ -307,6 +350,10 @@ footer{
     /*personas*/
 
     #personas{
+       flex-direction: column;   /*se pone para que cuando se3e haga responsive se haga en columnas */
+    }
+
+    #cajas{
         flex-direction: column;
     }
 
@@ -327,6 +374,64 @@ footer{
     flex-direction: column;
 }
 
+ /*redes socualesx*/
 
+ .social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
 
-/*LOGINNNNNNNNNNNNNNNNNNNNNN*/
+	.social ul {
+		list-style: none;
+	}
+
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+	.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-googleplus {background: #d95232;}
+	.social ul li .icon-siste {background: #16ce21;}
+	.social ul li .icon-mail {background: #666666;}
+
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+    footer{
+        background-color: #00369c;
+        color: #fff;
+        
+    }
+
+    .personas-footer{
+        padding: 10px 50px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .aliados-footer{
+        padding: 10px 50px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sobre-footer{
+        padding: 10px 50px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }

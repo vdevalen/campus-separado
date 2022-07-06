@@ -109,6 +109,7 @@ header{
 .boton-empezar:hover{
     background:  #00ff15;
 }
+
 /*personas*/
 #personas{
     padding: 50px 50px;
@@ -124,10 +125,6 @@ header{
     max-height: 300px;
     
 
-}
-
-#personas div{
-    padding: 30px 30px;
 }
 
 #personas div h4{
@@ -159,3 +156,63 @@ header{
     color: #fff;
 }
 
+
+/*responsive*/
+@media(max-width: 760px){
+    /*header*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed; 
+        width: 100%; /*ocupa todo*/
+        height: 100vh; /*100 de cualquier dispositivo*/
+        background-color: #00369c;
+        right: -100%; 
+        top: 0; /*abarca todo*/
+        text-align: center;    /*centra todo*/
+        padding: 100px 0px;
+        z-index: 100; /*para que no se toquen*/
+        transition: 0.8s; 
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{ /* la x del menu, poner la x arriba en el manu*/
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{ /*cuando el chek este chekeado y todo s los elementos de menu*/
+        right: 0;
+    }
+
+    /*personas*/
+
+    #personas{
+        flex-direction: column;
+    }
+
+    /*icoonos*/
+
+    .contenido-iconos{
+    flex-direction: column;
+    
+    }
+
+    .contenido-iconos div{
+    border: none;
+    }
+}
+/*formulario*/
+
+.datos-form{
+    flex-direction: column;
+}
+
+
+
+/*LOGINNNNNNNNNNNNNNNNNNNNNN*/
