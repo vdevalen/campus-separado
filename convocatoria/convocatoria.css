@@ -237,38 +237,72 @@ footer{
 .cursos h3{
     color: #00369c;
     text-align:center;
-    padding: 50px;
+    padding: 30px;
     flex-direction: column;
 }
 
 .cursos p{
-    padding: 50px;
-    text-align: right;
+    margin: 30px;
+    text-align: center;
     /* border: 1px solid black; */
     /* text-align: justify; */
     flex-direction: column;
 }
 
-.imagen-cursos img{
-    /* border: 1px solid rgb(133, 52, 52); */
-    width: 700px;
-    padding: 50px 50px;
-    /* border: 10px solid rgb(122, 230, 6); */
-    right: auto;
-    float: left;
-    flex-direction: column;
-    
+.imagen-cursos{
+    display: flex; /*haec que se ponga d elado*/
+    /* border: 1px solid red; */
+    margin: 50px;
+    align-items: center;
 }
 
-.imagen1-cursos1 img{
-    /* border: 10px solid rgb(67, 15, 15); */
-    width: 700px;
-    padding: 50px 50px;
-    left: auto;
-    float: right;
-    flex-direction: column;
-    
+.contenido-imagen{
+    width: 50%;
+    /* align-items:center ; */
 }
+
+
+#curso-img{
+    width: 100%;
+}
+
+.texto-imagen{
+    width: 50%;
+    /* border: 1px solid red; */
+    padding: 0px 50px;
+    font-size: 20px;
+    align-content: flex-start;
+}
+
+/*imagen a la derecha*/
+
+.imagen-cursos1{
+    /* display: flex; haec que se ponga d elado */
+    /* border: 1px solid red; */
+    margin: 50px;
+    align-items: center;
+    /* padding: 20px 10px; */
+}
+
+.contenido-imagen1{
+    width: 50%;
+    float: right;
+    /* align-items:center ; */
+}
+
+#curso-img-1{
+    width: 100%;
+    float: right;
+}
+
+.texto-imagen1 p{
+    width: 50%;
+    /* border: 1px solid red; */
+    padding: 0px 30px;
+    font-size: 20px;
+    align-content: flex-start;
+}
+
 /*footer siguenos*/
 
 .siguenos{

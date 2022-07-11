@@ -125,6 +125,7 @@ header{
     padding-top: 30px; /* IE6 workaround*/
     height: 0;
     overflow: hidden;
+    margin: 50px;
     }
     .video-responsive iframe, /* iframe, objet y embed le otrogaremos unos atributos que lo que realizarán es rellenar por completo el contendor que los envuelve, pudiendo así mantener la proporción en todos los dispositivos.*/
     .video-responsive object,
@@ -136,11 +137,74 @@ header{
     height: 100%;
     } 
 
+/*imagenes-hombre*/
+/*CONVOCATORIA cursos e imagen*/
+.entero-cursos{
+    overflow: hidden; /*hizo que el contenido no se montara encima del otro*/
+    margin: 50px;
+}
+
+.cursos h3{
+    color: #00369c;
+    text-align:center;
+    padding: 30px;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.cursos p{
+    margin: 10px;
+    text-align: center;
+    /* border: 1px solid black; */
+    /* text-align: justify; */
+    flex-direction: column;
+    font-size: 20px;
+    color:rgba(77, 77, 92, 0.53);
+}
+
+
+.imagen-cursos{
+    display: flex; /*haec que se ponga d elado*/
+    /* border: 1px solid red; */
+    margin: 50px;
+    align-items: center;
+    
+}
+
+.contenido-imagen{
+    width: 90%;
+    /* align-items:center ; */
+}
+
+
+#curso-img{
+    width: 100%;
+}
+
+.texto-imagen{
+    width: 50%;
+    /* border: 1px solid red; */
+    padding: 0px 50px;
+    font-size: 20px;
+    align-content: flex-start;
+}
+
+.texto-imagen h3{
+    color:#00369c;
+    font-size: 25px;
+}
+
+.texto-imagen p{
+    align-content:center;
+    
+}
 
 /*iconos**/
 #iconos{
     padding: 0px 50px;
     background: #fff;
+    
 }
 
 .contenido-iconos{
@@ -148,6 +212,7 @@ header{
     display: flex;
     justify-content: space-between;
     text-align: center;
+    
 }
 
 .contenido-iconos div{
@@ -238,6 +303,8 @@ header{
     background: #00ff15;
     color: #fff;
 }
+
+
 
 /*formularios*/
 #contacto{
@@ -486,6 +553,11 @@ form textarea::placeholder{
         background-color: #00369c;
         /* text-align: center;    centra todo */
     
+    }
+
+    /*home*/
+    .imagen-cursos{
+        flex-direction: column;
     }
 
     /* .personas-footer{
