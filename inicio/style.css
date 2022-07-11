@@ -1,9 +1,9 @@
 /*reset simple: aplican estilos*/
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*header*/
@@ -66,17 +66,19 @@ header{
 
 #banner{
     padding: 0 50px; /*se alinea la pagina que tenga la misma margen*/
-    background-image: url(/imagenes/photo-1565120130276-dfbd9a7a3ad7.avif);
-    height: 100vh;
+    background-image: url(/imagenes/inicio.png);
+    height: 50vh;
     background-size: cover; /*toma todo*/
     background-position: center;
+    flex-direction: column;
+}
 
-}#banner::before{
+#banner::before{
     content: '';
-    background: rgba(77, 77, 92, 0.6);
+    /* background: rgba(77, 77, 92, 0.6); */
     position: absolute;
-    width: 100%;
-    height: 100vh;
+    width: 0%;
+    height: 50vh;
     left: 0;
 }
 
@@ -99,18 +101,20 @@ header{
     font-weight: 600;
 }
 
-.boton-empezar{
+.boton-inscribete{
     text-decoration: none;
     color: #fff;
     border: 1px solid #16ce21;
-    padding: 20px 40px;
+    padding: 10px 20px;
     align-self: baseline; /*organiza el boton*/
     transition: all 0.4s;
     background-color: #16ce21;
-    border-radius: 10px;
+    border-radius: 30px;
+    position: absolute;
+    left: 220px;
 }
 
-.boton-empezar:hover{
+.boton-inscribete:hover{
     background:  #00ff15;
 }
 
@@ -223,7 +227,7 @@ header{
     color: #fff;
     padding: 10px 30px;
     border: 3px solid #16ce21;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-top: 15px;
     transition: all 0.4s;
     background: #16ce21;
@@ -250,7 +254,7 @@ header{
 }
 
 #contacto form{
-    max-width: 80% ;
+    max-width: 50% ;
     margin: 0 auto;
 }
 
@@ -314,7 +318,114 @@ form textarea::placeholder{
     background:  #00ff15;
 }
 
-/*responsive*/
+
+/*redes socualesx*/
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+	.social ul {
+		list-style: none;
+	}
+
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+	.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-googleplus {background: #d95232;}
+	.social ul li .icon-siste {background: #16ce21;}
+	.social ul li .icon-mail {background: #666666;}
+
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+
+    /*footer*/
+    
+    footer{
+        background-color: #00369c;
+        color: #fff;
+        margin: 0px auto;
+        /* border: 1px solid black; */
+        width: 100%; /*ocupa todo*/
+        height: 50vh; /*100 de cualquier dispositivo*/
+        margin: 0 auto;
+        /* padding: 60px 60px; */
+        /* border: 1px solid black; */
+        flex-direction: column;
+        padding: 60px;
+        }
+
+    .personas-inter{
+        flex-direction: column;
+        
+    }
+
+    .personas-footer{
+        padding: 10px 50px;
+        justify-content: center;
+        /* text-align: center; */
+        float: left;
+        /* border: 1px solid black; */
+        margin-left: 50px;
+        /* padding-top: 10px; */
+        flex-direction: column;
+
+    }
+
+    .personas-footer p{
+        line-height: 50px;
+    }
+
+    /*logo*/
+
+    .logo{
+        line-height: 60px;
+    }
+    .logo img{
+        flex-direction: column;
+        padding: 0px 60px;
+    }
+    
+    /*footer siguenos*/
+
+    .siguenos{
+        background-color: #00369c;
+        color: #fff;
+        padding: 0px 50px; 
+        float: left;
+        flex-direction: column;
+    }
+    .sobre-footer p{
+        line-height: 50px;
+        
+    }
+
+    .siguenos h1{
+        padding: 10px 20px;
+    }
+    .siguenos img{
+        height: 50px;
+        padding: 10px 20px;
+        cursor: pointer; /*manito*/
+
+    }
+
+        /*responsive*/
 @media(max-width: 760px){
     /*header*/
     .mostrar-menu,
@@ -367,94 +478,30 @@ form textarea::placeholder{
     .contenido-iconos div{
     border: none;
     }
-}
-/*formulario*/
 
-.datos-form{
-    flex-direction: column;
-}
-
-/*redes socualesx*/
-
-.social {
-	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-	left: 0; /* Establecemos la barra en la izquierda */
-	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
-	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
-}
-
-	.social ul {
-		list-style: none;
-	}
-
-	.social ul li a {
-		display: inline-block;
-		color:#fff;
-		background: #000;
-		padding: 10px 15px;
-		text-decoration: none;
-		-webkit-transition:all 500ms ease;
-		-o-transition:all 500ms ease;
-		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
-	}
-
-	.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
-	.social ul li .icon-twitter {background: #00abf0;}
-	.social ul li .icon-googleplus {background: #d95232;}
-	.social ul li .icon-siste {background: #16ce21;}
-	.social ul li .icon-mail {background: #666666;}
-
-	.social ul li a:hover {
-		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
-		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
-	}
-
-    /*footer*/
-    
     footer{
-        background-color: #9faabf;
-        color: #fff;
-        margin: 0px auto;
-        border: 1px solid black;
-        height: 350px;
-        
-        
+        flex-direction: column; 
+        width: 100%; /*ocupa todo*/
+        height: 100vh; /*100 de cualquier dispositivo*/
+        background-color: #00369c;
+        /* text-align: center;    centra todo */
+    
     }
 
-    .personas-footer{
-        width: 150px;
-        padding: 10px 50px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        float: left;
-        border: 1px solid black;
-        margin-left: 150px;
-        padding-top: 50px;
-
-
-
+    /* .personas-footer{
+        flex-direction: column; 
     }
 
-    .aliados-footer{
-        width: 250px;
-        padding: 10px 50px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        float: left;
-        border: 1px solid black;
-
-
+    .personas-int{
+        flex-direction: column; 
     }
 
-    .sobre-footer{
-        width: 250px;
-        padding: 10px 50px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        border: 1px solid black;
-
-        
+    .siguenos{
+        flex-direction: column; 
     }
+
+    .logo{
+        flex-direction: column; 
+    } */
+}
+

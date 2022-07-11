@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +14,7 @@ header{
     display: flex; /*ponerlo mas organizado uno al lado del otro*/
     justify-content: space-between; /*ponerlo separado uno del otro*/
     align-items: center; /*centrados dentro del contenedor*/
-
+    
 }
 
 .logo{
@@ -29,6 +28,7 @@ header{
     display: flex;
     text-decoration: none;
     list-style: none;
+    font-weight: 200;
 }
 .menu a{ /*menu a*/
     color: #fff;
@@ -62,18 +62,21 @@ header{
 }
 
 /*banner*/
+
 #banner{
     padding: 0 50px; /*se alinea la pagina que tenga la misma margen*/
-    background-image: url(/imagenes/NOSOTROS.png);
+    background-image: url(/imagenes/contacto.png);
     height: 50vh;
     background-size: cover; /*toma todo*/
     background-position: center;
+    flex-direction: column;
+}
 
-}#banner::before{
+#banner::before{
     content: '';
     /* background: rgba(77, 77, 92, 0.6); */
     position: absolute;
-    width: 100%;
+    width: 0%;
     height: 50vh;
     left: 0;
 }
@@ -97,7 +100,7 @@ header{
     font-weight: 600;
 }
 
-.boton-empezar{
+.boton-inscribete{
     text-decoration: none;
     color: #fff;
     border: 1px solid #16ce21;
@@ -107,52 +110,55 @@ header{
     background-color: #16ce21;
     border-radius: 30px;
     position: absolute;
-    left: 250px;
-} 
+    left: 220px;
+}
 
-.boton-empezar:hover{
+.boton-inscribete:hover{
     background:  #00ff15;
-} 
+}
 
-/*iconos*/
-.iconos-titulo{
-    text-align:center; /*CENTRA EL TEXTO¨*/
-    color: #00369c;
+/*cajas*/
+
+.titulo-caja-curso h3{
+    color: #1a60e0;
+    text-align: center;
     padding: 50px;
-    font-size: 30px; /*tamaño letra*/
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
 }
 
-.iconos-titulo p{
-    color: black;
-    padding: 25px 100px;
-    font-weight: 150px;
-    font-size: 20px;
-}
-
-/*personas*/
-#personas{
-    padding: 50px 50px;
-    display: flex;s
+#cajas{
+    background-color: ;
+    padding: 20px 20px;
     justify-content: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-between; 
     text-align: center;
 }
 
-
-#personas img{
-    border-radius: 100%;
+#cajas img{
+    /* border-radius: 100%; pone la imagen redonda */
     max-width: 300px ;
     max-height: 300px;
-    
-
+    border: #5d488e 10PX;
 }
 
-#personas div h4{
+#cajas img{
+    border: 1px solid #6f7f9e;
+    margin: 50px;
+    cursor: pointer; /*manito*/
+}
+
+
+#cajas div h4{
     color: #00369c;
     font-size: 20px;
     margin: 20px 0px;
 }
 
-#personas div p{
+#cajas div p{
     color: #4d4d5c87;
     font-size: 18px;
 }
@@ -176,76 +182,9 @@ header{
 }
 
 
-/*responsive*/
-@media(max-width: 760px){
-    /*header*/
-    .mostrar-menu,
-    .esconder-menu{
-        display: block;
-    }
-
-    .menu{
-        position: fixed; 
-        width: 100%; /*ocupa todo*/
-        height: 100vh; /*100 de cualquier dispositivo*/
-        background-color: #00369c;
-        right: -100%; 
-        top: 0; /*abarca todo*/
-        text-align: center;    /*centra todo*/
-        padding: 100px 0px;
-        z-index: 100; /*para que no se toquen*/
-        transition: 0.8s; 
-    }
-    .menu a{
-        display: block;
-        padding: 20px;
-    }
-    .esconder-menu{ /* la x del menu, poner la x arriba en el manu*/
-        position: absolute;
-        top: 40px;
-        right: 40px;
-    }
-    #check:checked ~ .menu{ /*cuando el chek este chekeado y todo s los elementos de menu*/
-        right: 0;
-    }
-
-    /*personas*/
-
-    #personas{
-        flex-direction: column;
-    }
-
-    /*icoonos*/
-
-    .contenido-iconos{
-    flex-direction: column;
+/*footer*/
     
-    }
-
-    .contenido-iconos div{
-    border: none;
-    }
-
-    /*footer*/
-    footer{
-        flex-direction: column; 
-        width: 100%; /*ocupa todo*/
-        height: 100vh; /*100 de cualquier dispositivo*/
-        background-color: #00369c;
-        /* text-align: center;    centra todo */
-    }
-
-}
-
-/*formulario*/
-
-.datos-form{
-    flex-direction: column;
-}
-
-  /*footer*/
-    
-  footer{
+footer{
     background-color: #00369c;
     color: #fff;
     margin: 0px auto;
@@ -286,10 +225,50 @@ header{
     line-height: 60px;
 }
 .logo img{
-    flex-direction: column;
     padding: 0px 60px;
 }
 
+
+/*CONVOCATORIA cursos e imagen*/
+.entero-cursos{
+    overflow: hidden; /*hizo que el contenido no se montara encima del otro*/
+}
+
+.cursos h3{
+    color: #00369c;
+    text-align:center;
+    padding: 50px;
+    flex-direction: column;
+}
+
+.cursos p{
+    padding: 50px;
+    text-align: right;
+    /* border: 1px solid black; */
+    /* text-align: justify; */
+    flex-direction: column;
+}
+
+.imagen-cursos img{
+    /* border: 1px solid rgb(133, 52, 52); */
+    width: 700px;
+    padding: 50px 50px;
+    /* border: 10px solid rgb(122, 230, 6); */
+    right: auto;
+    float: left;
+    flex-direction: column;
+    
+}
+
+.imagen1-cursos1 img{
+    /* border: 10px solid rgb(67, 15, 15); */
+    width: 700px;
+    padding: 50px 50px;
+    left: auto;
+    float: right;
+    flex-direction: column;
+    
+}
 /*footer siguenos*/
 
 .siguenos{
