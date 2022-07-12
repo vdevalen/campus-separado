@@ -40,7 +40,7 @@ body{
 .container1 .forms{
     display: flex;
     align-items: center;
-    height: 520px;
+    height: 600px;
     width: 200%;
     transition: height 0.2s ease;
     margin: 10px 0px; /*espacio entre el formulario con el nombre campus*/
@@ -171,18 +171,23 @@ body{
 .form .button{
     margin-top: 35px;
 }
-
-.form1 .button input{
-    border: none;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: 6px;
-    background-color: #19c003;
-    cursor: pointer;
+.form1 .button .formulario__btn{   
+    padding: 0px 10px; 
+    border: none;     
+    color: #fff;     
+    font-size: 25px;       
+    font-size: 25px;   
+    letter-spacing: 1px;     
+    border-radius: 6px;     
+    background-color: #19c003;     
+    cursor: pointer;     
     transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid #16ce21;
+    position: absolute;
+    left: 136px;
 }
+
 
 .button input:hover{
     background-color: #3ec92b;

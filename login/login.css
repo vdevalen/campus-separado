@@ -46,7 +46,7 @@ body{
 .container .forms{
     display: flex;
     align-items: center;
-    height: 450px;
+    height: 500px;
     width: 200%;
     transition: height 0.2s ease;
     margin: 10px 0px; /*espacio entre el formulario con el nombre campus*/

@@ -15,7 +15,6 @@ header{
     display: flex; /*ponerlo mas organizado uno al lado del otro*/
     justify-content: space-between; /*ponerlo separado uno del otro*/
     align-items: center; /*centrados dentro del contenedor*/
-    
 }
 
 .logo{
@@ -107,7 +106,7 @@ header{
     border: 1px solid #16ce21;
     padding: 10px 20px;
     align-self: baseline; /*organiza el boton*/
-    transition: all 0.4s;
+    transition: all 0.4ss;
     background-color: #16ce21;
     border-radius: 30px;
     position: absolute;
@@ -195,9 +194,13 @@ header{
     font-size: 25px;
 }
 
+.texto-imagen h1{
+    color: black;
+    font-size: 20px ;
+}
 .texto-imagen p{
     align-content:center;
-    
+    /* text-align: justify; */
 }
 
 /*iconos**/

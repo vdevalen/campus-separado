@@ -153,8 +153,13 @@ header{
 }
 
 #personas div p{
-    color: #4d4d5c87;
+    color: #45454e87;
     font-size: 18px;
+}
+
+#personas div h1{
+    color: #22222587;
+
 }
 
 .boton-saber-mas{

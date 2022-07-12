@@ -15,43 +15,44 @@
 <!-- Registration Form -->
 <!-- Registration Form -->
 <div class="container1">
-<div class="forms">
+<div class="forms" id="formulario">
 <div class="form1 signup">
     <span class="title">REGISTRO | SC</span>
     <form action="#">
-        <div class="input-field">
-            <input type="text" placeholder="Cedula" required>
+        <div class="input-field" id="grupo__usuario">
+            <input type="text" id="cedula" placeholder="Cedula" required>
             <i class="uil uil-user"></i>
         </div>
 
         <form action="#">
-            <div class="input-field">
-                <input type="text" placeholder="Nombre" required>
+            <div class="input-field" id="grupo__usuario">
+                <input type="text" id="nombre" placeholder="Nombre" required>
                 <i class="uil uil-user"></i>
             </div>
 
             <form action="#">
-                <div class="input-field">
-                    <input type="text" placeholder="Apellido" required>
+                <div class="input-field" id="grupo__usuario">
+                    <input type="text" id="apellido" placeholder="Apellido" required>
                     <i class="uil uil-user"></i>
                 </div>
-
-                <div class="input-field">
-                    <input type="text" placeholder="Correo electronico" required>
+                
+                <div class="input-field" id="grupo__usuario">
+                    <input type="text" id="email" placeholder="Correo electronico" required>
                     <i class="uil uil-envelope icon"></i>
                 </div>
+                
 
-                <div class="input-field">
-                    <input type="password" class="password" placeholder="Contraseña" required>
+                <div class="input-field" id="grupo__usuario">
+                    <input id="password-input" type="password" class="password" placeholder="Contraseña" required>
                     <i class="uil uil-lock icon"></i>
-                    <i class="uil uil-eye-slash showHidePw"></i>
+                    <i id="icon" class="uil uil-eye-slash showHidePw" onclick="eyeLogo()"></i>
                 </div>
 
-                <div class="input-field">
-                    <input class="TestInput" type="password" class="password"
+                <div class="input-field" id="grupo__usuario">
+                    <input id="password-input2"  class="TestInput" type="password" class="password"
                         placeholder="Confirmar contraseña" required>
                     <i class="uil uil-lock icon"></i>
-                    <i class="uil uil-eye-slash showHidePw"></i>
+                    <i id="icon2" class="uil uil-eye-slash showHidePw" onclick="eyeLogo2()"></i>
 
                 </div>
 
@@ -63,7 +64,7 @@
                 </div>
 
                 <div class="input-field button">
-                    <input type="button" value="Acceso">
+                    <button type="submit" class="formulario__btn" onclick="Registro()">Acesso</button>
                 </div>
             </form>
 
@@ -77,32 +78,37 @@
 </div>
 </div>
 </div>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript">
-function Login() {
+
+function Registro() {
 var data = {
+cedula: $("#cedula").val(),
+nombre: $("#nombre").val(),
+apellido: $("#apellido").val(),
 email: $("#email").val(),
-password: $("#password").val()
+password: $("#password-input").val(),
+confirmpassword: $("#password-input2").val(),
 }
 console.log(data);
 $.ajax({
 type: 'POST',
-url: 'https://localhost:7148/api/account/login',
+url: 'https://webapiapplication.herokuapp.com/api/account/register',
 contentType: 'application/json; charset=utf-8',
 data: JSON.stringify(data),
 success: function (result) {
-    alert('Login exitoso');
+    alert('Registro exitoso');
     console.log(result);
 },
-error: function () {
-    alert('Login fallido');
-    console.log('Failed ');
+error: function (result) {
+    alert('Registro fallido'+ result);
+    console.log('Failed');
 }
 })
 }
 </script>
-<script src="login.js"></script>
-</body>
 
-<script src="/login/login.js"></script>
+<script src="registro.js"></script>
+</body>
 </html>
