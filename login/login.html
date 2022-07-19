@@ -89,7 +89,7 @@
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data),
             success: function (result) {
-                alert('Login exitoso');
+                location.replace("/login-inter/login-inter.html")
                 console.log(result);
             },
             error: function (result) {
