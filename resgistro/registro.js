@@ -35,3 +35,14 @@ function eyeLogo2(){
         icon2.classList.replace("uil-eye", "uil-eye-slash");
     }
 }
+
+//validaciones 
+
+const camos= {
+    cedula: false,
+    nombre: false,
+    apellido: false,
+    email: false,
+    password-input: false,
+    password-input2: false
+}
